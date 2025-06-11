@@ -1019,7 +1019,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## Security
 
-For security concerns, please email security@yourapp.com instead of using the issue tracker.
+For security concerns, please email ikhwanulabiyu@gmail.com instead of using the issue tracker.
 
 ## Support
 
