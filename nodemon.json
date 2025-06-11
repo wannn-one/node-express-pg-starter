@@ -1,0 +1,25 @@
+{
+  "watch": [
+    "src/"
+  ],
+  "ext": "js,json",
+  "ignore": [
+    "src/**/*.test.js",
+    "src/**/*.spec.js",
+    "node_modules/",
+    "dist/",
+    "test/",
+    "*.log"
+  ],
+  "env": {
+    "NODE_ENV": "development"
+  },
+  "delay": 1000,
+  "verbose": true,
+  "colours": true,
+  "events": {
+    "start": "echo '🚀 Starting development server...'",
+    "crash": "echo '💥 Server crashed - waiting for file changes before starting...'",
+    "restart": "echo '♻️  Server restarted due to file changes'"
+  }
+} 
