@@ -2,6 +2,75 @@
 
 A production-ready boilerplate for building RESTful APIs with Node.js, Express.js, and PostgreSQL.
 
+## Table of Contents
+
+- [Features](#features)
+- [Project Structure](#project-structure)
+- [Quick Start](#quick-start)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+- [🐳 Docker Setup](#-docker-setup)
+  - [Services](#services)
+  - [Quick Start with Docker](#quick-start-with-docker)
+  - [Docker Commands](#docker-commands)
+  - [Environment Variables for Docker](#environment-variables-for-docker)
+  - [Health Check](#health-check)
+  - [Development vs Production](#development-vs-production)
+- [Testing](#testing)
+  - [Test Setup](#test-setup)
+- [API Versioning](#api-versioning)
+  - [Features](#features-1)
+  - [Configuration](#configuration)
+  - [API Prefix Options](#api-prefix-options)
+  - [Available Routes](#available-routes)
+  - [Response Headers](#response-headers)
+  - [Adding New Versions](#adding-new-versions)
+  - [Deprecation Warnings](#deprecation-warnings)
+  - [Version Utilities](#version-utilities)
+- [Router Configuration](#router-configuration)
+  - [File Structure](#file-structure)
+  - [Router Features](#router-features)
+  - [Adding New API Versions](#adding-new-api-versions)
+  - [Custom Route Setup](#custom-route-setup)
+  - [Router Functions](#router-functions)
+  - [Development Routes](#development-routes)
+- [API Testing Examples](#api-testing-examples)
+  - [Quick Health Check](#quick-health-check)
+  - [Version Information](#version-information)
+  - [Development Testing](#development-testing)
+  - [Authentication Examples](#authentication-examples)
+  - [API Prefix Testing](#api-prefix-testing)
+  - [Headers Testing](#headers-testing)
+- [API Endpoints](#api-endpoints)
+  - [Version Information](#version-information-1)
+  - [Authentication](#authentication)
+  - [Users](#users)
+  - [Development Endpoints](#development-endpoints-development-only)
+- [Environment Variables](#environment-variables)
+- [Scripts](#scripts)
+- [Development](#development)
+  - [Development Server Options](#development-server-options)
+  - [File Watching](#file-watching)
+  - [Environment Variables](#environment-variables-1)
+- [Server Startup Information](#server-startup-information)
+  - [Startup Console Output](#startup-console-output)
+  - [Features](#features-2)
+- [Database Setup](#database-setup)
+  - [Initial Setup](#initial-setup)
+  - [Demo Users](#demo-users)
+  - [Sequelize v6 Specifics](#sequelize-v6-specifics)
+- [Troubleshooting](#troubleshooting)
+  - [Deprecation Warnings](#deprecation-warnings-1)
+  - [ESLint Configuration](#eslint-configuration)
+- [Testing](#testing-1)
+- [Deployment](#deployment)
+  - [Manual Deployment](#manual-deployment)
+- [Contributing](#contributing)
+- [License](#license)
+- [Security](#security)
+- [Support](#support)
+- [📝 TODO](#-todo)
+
 ## Features
 
 - **Node.js 20.x** - Latest LTS version
@@ -13,7 +82,6 @@ A production-ready boilerplate for building RESTful APIs with Node.js, Express.j
 - **API Versioning** - Flexible API versioning with middleware support
 - **SWC** - Fast TypeScript/JavaScript compiler for building
 - **Docker** - Containerized development and deployment
-- **GitHub Actions** - CI/CD pipeline with testing and deployment
 - **ESLint v9** - Modern code linting with flat config
 - **Mocha v11 + Chai v5** - Latest testing framework
 - **Morgan** - HTTP request logger middleware
@@ -60,8 +128,6 @@ A production-ready boilerplate for building RESTful APIs with Node.js, Express.j
 │   └── app.js              # Express application
 ├── test/                   # Test files
 │   └── auth.test.js
-├── .github/workflows/      # GitHub Actions
-│   └── ci.yml
 ├── docker-compose.yml      # Docker compose configuration
 ├── Dockerfile              # Docker configuration
 └── package.json
@@ -918,18 +984,6 @@ npm test -- --grep "Authentication"
 ```
 
 ## Deployment
-
-### GitHub Actions
-
-The project includes a CI/CD pipeline that:
-- Runs tests on every push/PR
-- Builds and pushes Docker images
-- Performs security scans
-
-Required secrets:
-- `DOCKER_USERNAME` - Docker Hub username
-- `DOCKER_PASSWORD` - Docker Hub password
-- `SNYK_TOKEN` - Snyk security scanning token (optional)
 
 ### Manual Deployment
 
